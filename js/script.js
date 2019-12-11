@@ -1,6 +1,13 @@
 ready(function(){
+/*Свернуть\развернусть фильтры */	
+document.querySelector('.filters').classList.remove('filters--open');
+document.getElementById('filters-trigger').addEventListener('click',toggleFilters);
+function toggleFilters (){
+	document.querySelector('.filters').classList.toggle('filters--open')
+	}
 
   // В этом месте должен быть написан ваш код
+  /*
   const myCard = [
     {
       descr: "",
@@ -101,7 +108,7 @@ ready(function(){
   myMinusBtn.forEach((item, index) => {item.addEventListener('click', function() {changeMinusBtn(item, index)})});
 
   console.log(myCard);
-
+*/
 
   // function selectElem(item, ) {
   //   return item.querySelector(item);
