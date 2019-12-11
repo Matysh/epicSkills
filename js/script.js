@@ -5,6 +5,18 @@ document.getElementById('filters-trigger').addEventListener('click',toggleFilter
 function toggleFilters (){
 	document.querySelector('.filters').classList.toggle('filters--open')
 	}
+	
+	
+	
+	
+	//Выводим весь каталог книг
+	
+	let cards = '';
+	let article = document.createElement('div');
+	for (let i = 0; i < books.length;i++) {
+		cards += `<article class=\"card\"><a class=\"card__inner\" href=\"index.html#${books[i].uri}\"><img class=\"card__img\" src=\"img/${books[i].uri}.jpg\" width=\"148\" height=\"208\" alt=\"${books[i].name}\"/><h2 class=\"card__title\">${books[i].name}</h2><span class=\"card__new\">new</span><p class=\"card__price\">${books[i].price} ₽</p></a><button class=\"btn  btn--sm card__buy\"><svg class=\"btn__icon\" width=\"14\" height=\"14\"><use xlink:href=\"#plus\"></use></svg><span>В корзину</span></button></article>`
+	}
+	document.querySelector('.catalog__books-list').insertAdjacentHTML('afterbegin', cards);
 
   // В этом месте должен быть написан ваш код
   /*
