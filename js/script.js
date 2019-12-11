@@ -1,5 +1,5 @@
 ready(function(){
-/*Свернуть\развернусть фильтры */	
+/*Свернуть\развернуть фильтры */	
 document.querySelector('.filters').classList.remove('filters--open');
 document.getElementById('filters-trigger').addEventListener('click',toggleFilters);
 function toggleFilters (){
