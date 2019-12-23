@@ -101,7 +101,7 @@
               <svg width="24" height="24">
                 <use xlink:href="#cart"></use>
               </svg>
-              <span class="page-header__cart-num">7</span>
+              <span class="page-header__cart-num">0</span>
             </a>
             <div class="user-auth page-header__user-auth">
               <img class="user-auth__avatar" src="img/demo-avatar-m.png" alt="Антон Павлов" width="34" height="34"/>
@@ -135,19 +135,19 @@
         <section class="cart">
           <form class="form cart__inner">
             <header class="cart__header">
-              <h1 class="cart__title">В корзине 99992 товара</h1>
+              <h1 class="cart__title">Товаров в корзине: 0 шт.</h1>
               <button class="btn  btn--text cart__clear-btn" type="button">Очистить корзину</button>
             </header>
-            <table class="cart__table">
-              <tr class="cart__table-headers">
-                <th class="cart__col-1"></th>
-                <th class="cart__col-2">Товар</th>
-                <th class="cart__col-3">Кол-во</th>
-                <th class="cart__col-4">Цена</th>
-                <th class="cart__col-5"></th>
-              </tr>
+              <table class="cart__table">
+                <tr class="cart__table-headers">
+                  <th class="cart__col-1"></th>
+                  <th class="cart__col-2">Товар</th>
+                  <th class="cart__col-3">Кол-во</th>
+                  <th class="cart__col-4">Цена</th>
+                  <th class="cart__col-5"></th>
+                </tr>
 
-              
+
 <!--               <tr class="cart__product">
                 <td class="cart__col-1">
                   <img class="cart__item-img" src="img/tsennye-resheniya.jpg" alt="Ценные решения">
@@ -202,11 +202,7 @@
                   </button>
                 </td>
               </tr> -->
-              <tr>
-                <td class="cart__products-price" colspan="5">
-                  Итого к оплате: <strong class="cart__products-price-num" id="cart-products-price-num">2 200 ₽</strong>
-                </td>
-              </tr>
+
             </table>
             <div class="cart__checkout checkout">
               <h2 class="checkout__title">Оформление заказа</h2>
@@ -436,6 +432,8 @@
     <script src="js/choices.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/script.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/modules/cart.js"></script>
     <div class="modal__backdrop"></div>
   </body>
 </html>

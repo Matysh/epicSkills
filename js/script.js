@@ -72,41 +72,41 @@ ready(function () {
 
             // myHTMLFragment.insertAdjacentHTML('afterend', renderItem(item));
         });
-        //  myProductCartHeader.parentElement.append(myHTMLFragment);
+        // myProductCartHeader.arentElement.append(myHTMLFragment);
     }
 
-    renderCart(myCard);
-    console.log(myProductCartHeader);
-
-    const myPlusBtn = selectElements('.field-num__btn-plus');
-    const myMinusBtn = selectElements('.field-num__btn-minus');
-    const myQtyFields = selectElements('.field-num__input');
-    const myPriceFields = selectElements('.cart__item-price');
-
-    function changePlusBtn(elem, ind) {
-        myQtyFields[ind].value = ++myCard[ind].qty;
-        myCard[ind].totalItemPrice = myCard[ind].qty * myCard[ind].price;
-        myPriceFields[ind].textContent = myCard[ind].totalItemPrice + '  ₽';
-    }
-
-    function changeMinusBtn(elem, ind) {
-        if (myQtyFields[ind].value > 1) {
-            myQtyFields[ind].value = --myCard[ind].qty;
-            myCard[ind].totalItemPrice = myCard[ind].qty * myCard[ind].price;
-            myPriceFields[ind].textContent = myCard[ind].totalItemPrice + '  ₽';
-        }
-    }
-
-    myPlusBtn.forEach((item, index) => {
-        item.addEventListener('click', function () {
-            changePlusBtn(item, index)
-        })
-    });
-    myMinusBtn.forEach((item, index) => {
-        item.addEventListener('click', function () {
-            changeMinusBtn(item, index)
-        })
-    });
+    // renderCart(myCard);
+    // console.log(myProductCartHeader);
+    //
+    // const myPlusBtn = selectElements('.field-num__btn-plus');
+    // const myMinusBtn = selectElements('.field-num__btn-minus');
+    // const myQtyFields = selectElements('.field-num__input');
+    // const myPriceFields = selectElements('.cart__item-price');
+    //
+    // function changePlusBtn(elem, ind) {
+    //     myQtyFields[ind].value = ++myCard[ind].qty;
+    //     myCard[ind].totalItemPrice = myCard[ind].qty * myCard[ind].price;
+    //     myPriceFields[ind].textContent = myCard[ind].totalItemPrice + '  ₽';
+    // }
+    //
+    // function changeMinusBtn(elem, ind) {
+    //     if (myQtyFields[ind].value > 1) {
+    //         myQtyFields[ind].value = --myCard[ind].qty;
+    //         myCard[ind].totalItemPrice = myCard[ind].qty * myCard[ind].price;
+    //         myPriceFields[ind].textContent = myCard[ind].totalItemPrice + '  ₽';
+    //     }
+    // }
+    //
+    // myPlusBtn.forEach((item, index) => {
+    //     item.addEventListener('click', function () {
+    //         changePlusBtn(item, index)
+    //     })
+    // });
+    // myMinusBtn.forEach((item, index) => {
+    //     item.addEventListener('click', function () {
+    //         changeMinusBtn(item, index)
+    //     })
+    // });
 
     console.log(myCard);
 

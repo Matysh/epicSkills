@@ -41,5 +41,15 @@ noUiSlider.create(slider, {
 let cards = '';
 for (let i = 0; i < filter(books).length; i++) {
     cards += `<article data-index=\"${i}\"class=\"card\"><a class=\"card__inner\" href=\"index.html#${filter(books)[i].uri}\"><img class=\"card__img\" src=\"img/${filter(books)[i].uri}.jpg\" width=\"148\" height=\"208\" alt=\"${filter(books)[i].name}\"/><h2 class=\"card__title\">${filter(books)[i].name}</h2><span class=\"card__new\">new</span><p class=\"card__price\">${filter(books)[i].price} ₽</p></a><button class=\"btn  btn--sm card__buy\"><svg class=\"btn__icon\" width=\"14\" height=\"14\"><use xlink:href=\"#plus\"></use></svg><span>В корзину</span></button></article>`
+    books[i].id = i;
 }
 document.querySelector('.catalog__books-list').insertAdjacentHTML('afterbegin', cards);
+
+const card__buy = document.querySelectorAll('.card__buy');
+for (let i = 0; i < books.length; i++) {
+    card__buy[i].addEventListener('click', function (event) {
+        event.stopPropagation();
+        cartAddItem(this.parentElement.dataset.index, books[this.parentElement.dataset.index].quantity);
+    });
+
+}

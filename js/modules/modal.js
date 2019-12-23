@@ -1,5 +1,4 @@
 const page = document.querySelector('.page');
-
 function openModal() {
     closeAll();
 
@@ -48,6 +47,9 @@ function openModal() {
 
     const modal = document.querySelector('.modal');
     modal.querySelector('.modal__close').addEventListener('click', closeAll);
+    modal.querySelector('.btn--price').addEventListener('click',  (event) =>{
+        cartAddItem(this.dataset.index, books[this.dataset.index].quantity);
+    });
     modal.addEventListener('click', function (event) {
         if (event.target !== event.currentTarget) {
             return;
